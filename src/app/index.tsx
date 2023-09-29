@@ -12,6 +12,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { GlobalStyle } from 'styles/global-styles';
 
+import { LandingPage } from './pages/LandingPage';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
@@ -28,6 +29,7 @@ export function App() {
       </Helmet>
 
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <GlobalStyle />
